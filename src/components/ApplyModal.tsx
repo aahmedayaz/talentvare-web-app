@@ -1,36 +1,37 @@
-import React from 'react'
+import React, { useCallback } from 'react';
 
 type Props = {
-  open: boolean
-  onClose: () => void
-}
+  open: boolean;
+  onClose: () => void;
+};
 
 const ApplyModal: React.FC<Props> = ({ open, onClose }) => {
-  const [seconds, setSeconds] = React.useState(5)
-  const [isClosing, setIsClosing] = React.useState(false)
+  const [seconds, setSeconds] = React.useState(5);
+  const [isClosing, setIsClosing] = React.useState(false);
+
+  const handleClose = useCallback(() => {
+    if (isClosing) return;
+    setIsClosing(true);
+    setTimeout(() => onClose(), 250);
+  }, [isClosing, onClose]);
 
   React.useEffect(() => {
-    if (!open) return
-    setSeconds(5)
-    setIsClosing(false)
-    const interval = setInterval(() => setSeconds((s) => Math.max(0, s - 1)), 1000)
-    return () => clearInterval(interval)
-  }, [open])
+    if (!open) return;
+    setSeconds(5);
+    setIsClosing(false);
+    const interval = setInterval(() => setSeconds((s) => Math.max(0, s - 1)), 1000);
+    return () => clearInterval(interval);
+  }, [open]);
 
   React.useEffect(() => {
-    if (!open) return
+    if (!open) return;
     if (seconds === 0) {
-      handleClose()
+      handleClose();
     }
-  }, [open, seconds])
+  }, [open, seconds, handleClose]);
 
-  const handleClose = () => {
-    if (isClosing) return
-    setIsClosing(true)
-    setTimeout(() => onClose(), 250)
-  }
+  if (!open) return null;
 
-  if (!open) return null
   return (
     <div
       className="fixed inset-0 z-50 grid place-items-center bg-black/50 backdrop-blur-[2px] cursor-pointer"
@@ -60,7 +61,11 @@ const ApplyModal: React.FC<Props> = ({ open, onClose }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path d="M20 6L9 17l-5-5" className="animate-stroke" style={{ strokeDasharray: 48, strokeDashoffset: 48 } as any} />
+            <path
+              d="M20 6L9 17l-5-5"
+              className="animate-stroke"
+              style={{ strokeDasharray: 48, strokeDashoffset: 48 } as any}
+            />
           </svg>
         </div>
         <h3 className="mt-5 text-center text-[22px] font-semibold text-slate-800">Application Received</h3>
@@ -75,9 +80,7 @@ const ApplyModal: React.FC<Props> = ({ open, onClose }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ApplyModal
-
-
+export default ApplyModal;
