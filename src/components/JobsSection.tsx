@@ -25,7 +25,7 @@ const JobsSection: React.FC<Props> = ({ title, onApply, savedIds, toggleSave, it
         <h2 className="text-[18px] font-semibold text-slate-800">{title}</h2>
         <button className="text-[#0154AA] text-[14px] underline decoration-[#0154AA] cursor-pointer">See {title}</button>
       </div>
-      <div className="mt-3 grid grid-cols-1 tablet:grid-cols-2 laptop-sm:grid-cols-4 laptop-lg:grid-cols-5 gap-4">
+      <div className="mt-3 grid grid-cols-1 tablet:grid-cols-2 laptop-sm:grid-cols-4 gap-4">
         {getOrderedJobs(sectionKey).slice(0, items).map((job, i) => {
           const id = `${sectionKey}-${job.id}`
           return (

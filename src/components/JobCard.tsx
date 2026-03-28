@@ -14,7 +14,7 @@ type Props = {
   job?: JobData;
 };
 
-// Type assertion helper (optional, but makes it cleaner)
+// Type assertion for react-icons
 const BookmarkOutline = FaRegBookmark as React.ComponentType<{ className?: string }>;
 const BookmarkFilled = FaBookmark as React.ComponentType<{ className?: string }>;
 
@@ -26,20 +26,19 @@ const JobCard: React.FC<Props> = ({ jobId, onApply, job }) => {
 
   return (
     <div className="rounded-2xl ring-1 ring-slate-300 bg-white p-4 flex flex-col h-full">
-      {/* Promoted badge */}
       <div className="text-[12px] text-slate-500 mb-2">Promoted</div>
 
-      {/* Company info */}
       <div className="flex items-center gap-3">
         <img
           src={companyAvatarUrl}
           alt="Company"
           className="h-10 w-10 rounded-lg ring-1 ring-slate-300 object-cover bg-white"
         />
-        <div>
+        {/* Title container: allows truncation */}
+        <div className="min-w-0 flex-1">
           <button
             type="button"
-            className="font-semibold text-slate-800 underline decoration-transparent underline-offset-4 hover:decoration-[#0154AA] cursor-pointer"
+            className="font-semibold text-slate-800 underline decoration-transparent underline-offset-4 hover:decoration-[#0154AA] cursor-pointer truncate w-full text-left"
           >
             {computed.title}
           </button>
