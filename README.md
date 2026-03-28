@@ -4,16 +4,16 @@ Modern, highly-responsive job search UI built with React + Tailwind CSS, featuri
 
 ### Responsive Laptop Preview
 
-<img width="2880" height="3178" alt="talentvare-frontend vercel app_" src="https://github.com/user-attachments/assets/c76b2974-1bbe-4588-8b30-e2878b493429" />
-
-<img width="916" height="353" alt="image" src="https://github.com/user-attachments/assets/150e04ec-76c9-4d36-a4ce-8f77efa04f04" />
+<img width="2880" height="3208" alt="localhost_3000_" src="https://github.com/user-attachments/assets/e88303df-6fda-4c20-a73b-0ef6967056f0" />
 
 
-( **Note**: You can see the mobile, tablet and desktop version UI in the end of the README.md file )
+<img width="1920" height="715" alt="image" src="https://github.com/user-attachments/assets/a49dd1a8-d52d-4e50-8d53-65a575b7219a" />
+
+
 
 ### Live Demo
 
-( TalentVare Frontend Vercel Live Link ) :  [https://talentvare-frontend.vercel.app](https://talentvare-frontend.vercel.app)
+( TalentVare Frontend Vercel Live Link ) :  [https://talentvare-web-app.vercel.app/](https://talentvare-web-app.vercel.app/)
 
 ## Tech Stack
 
@@ -45,8 +45,8 @@ Third‑party services/libraries used in UX:
   - Right content: search bar, chips, and three jobs sections
 - **Search Bar with Modern Dropdowns**
 
-  
-  - <img width="615" height="298" alt="image" src="https://github.com/user-attachments/assets/f81cd969-933a-4960-b00f-76b66a93cd49" />
+
+  - <img width="1347" height="676" alt="image" src="https://github.com/user-attachments/assets/87ec4c0a-640a-44d4-9c67-c6c828277028" />
   - Select Location and Job Type menus with smooth open/close, outside-click dismissal
   - Right-edge aligned menus with visible rings; hover interactions; scrollable lists
   - Narrower input + wider Search button for emphasis
@@ -57,8 +57,7 @@ Third‑party services/libraries used in UX:
 - **Job Cards**
 
 
-  - <img width="615" height="161" alt="image" src="https://github.com/user-attachments/assets/b6f32109-5868-4020-9842-8c792f52cea9" />
-  - Deterministic avatars via DiceBear seed per job
+  - <img width="1327" height="355" alt="image" src="https://github.com/user-attachments/assets/565d69de-a2fb-4270-afd5-38c08b2888c5" />
   - Bookmark toggle with `react-icons` bookmark states and toast notifications
   - Apply flow: modal with animated check; button becomes “Applied ✓” and disables
 - **State & Persistence**
@@ -67,34 +66,9 @@ Third‑party services/libraries used in UX:
 - **Animations**
 
 
-  - <img width="903" height="409" alt="image" src="https://github.com/user-attachments/assets/4c41f3fb-321e-44a6-bee3-7ed9eedba28f" />
+  - <img width="1894" height="832" alt="image" src="https://github.com/user-attachments/assets/bee2b6d4-570b-4887-8f19-1530084ca3ec" />
   - Modal open/close pop, stroke-draw tick, subtle glows
   - Mobile sheet slide, hover/active transitions
-
-## Project Structure
-
-```text
-src/
-  components/
-    ApplyModal.tsx
-    JobCard.tsx
-    JobsSection.tsx
-    Navbar.tsx
-    ProfileCard.tsx
-    SearchBar.tsx
-  data/
-    jobs.ts          # JOBS + FEATURED_JOBS/RECOMMENDED_JOBS/LATEST_JOBS
-  pages/
-    FindJobs.tsx
-    UnderConstruction.tsx
-  utils/
-    avatar.ts        # DiceBear avatar data URI helper
-  App.tsx
-  index.tsx
-  index.css
-  tailwind.css       # Tailwind v4 input, tokens, keyframes
-  _generated.css     # Tailwind output (gitignored typically)
-```
 
 ## Setup & Usage
 
@@ -168,12 +142,4 @@ Optional optimizations:
 - React Toastify for slick toasts
 - Tailwind CSS for fast, utility-first styling
 
-## Other Screens ( Mobile, Tablet ) :
-
-### Tablet Screen :
-<img alt="localhost_3000_" src="https://github.com/user-attachments/assets/2b5fd674-e3ad-49c1-acc3-71609b77514e" />
-
-
-### Mobile Screen :
-<img alt="localhost_3000_ (1)" src="https://github.com/user-attachments/assets/f44301e3-d661-43a1-b25d-04b4e22ddadf" />
 
