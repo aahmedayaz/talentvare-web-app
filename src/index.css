@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: var(--font-neue, "Neue Haas Grotesk Display Pro"), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* All buttons: no text selection, no outline / browser focus ring (decorative Tailwind ring-* shadows unchanged) */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"] {
+  user-select: none;
+  -webkit-user-select: none;
+  outline: none;
+}
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+  border: 0;
+}
+
+button:focus,
+button:focus-visible,
+button:active,
+input[type="button"]:focus,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus,
+input[type="reset"]:focus-visible,
+[role="button"]:focus,
+[role="button"]:focus-visible,
+[role="button"]:active {
+  outline: none;
+}
+
+/* Navbar desktop typography (1280 / 1366 / 1440) — weight 500; sizes scale so spacing stays balanced */
+.navbar-nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+@media (width >= 1366px) {
+  .navbar-nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (width >= 1440px) {
+  .navbar-nav-link {
+    font-size: 15px;
+  }
+}
+
+/* Navbar search field: flat, no focus border/shadow (see NavbarSearch.tsx) */
+.navbar-search-field {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  color: #374151;
+  background-color: #f3f4f7;
+  border-radius: 6px;
+}
+
+.navbar-search-field::placeholder {
+  font-weight: 400;
+  color: #717d96;
+}
+
+.navbar-search-field:focus,
+.navbar-search-field:focus-visible,
+.navbar-search-field:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  --tw-ring-width: 0 !important;
+  --tw-ring-offset-width: 0 !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  background-color: #f3f4f7;
+}
+
+.navbar-resume-btn {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 6px;
+}
+
+@media (width >= 1366px) {
+  .navbar-search-field,
+  .navbar-resume-btn {
+    font-size: 14px;
+  }
+}
+
+@media (width >= 1440px) {
+  .navbar-search-field,
+  .navbar-resume-btn {
+    font-size: 15px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
